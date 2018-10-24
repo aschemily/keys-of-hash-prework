@@ -1,12 +1,8 @@
 class Hash
   def keys_of(arguments)
     # code goes here
- animals = []
- self.each {|animal, place|
-    if arguments.include?(place)
-        animals << animal 
-      end 
-      }
-      return animals
+ self.map do |key, value|
+   key if arguments.include?(value?)
+ end.compact
  end
 end
