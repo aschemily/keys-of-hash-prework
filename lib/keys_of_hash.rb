@@ -1,9 +1,13 @@
 class Hash
   def keys_of(arguments)
     # code goes here
-   self.map do |k, v|
-     k if arguments.include?(v)
-   end.compact
-   end
-  
+  array = []
+  arguments.each do |x|
+    self.each do |k, v |
+      if v == x 
+        array << k 
+      end 
+    end
+  end
+  array
 end
